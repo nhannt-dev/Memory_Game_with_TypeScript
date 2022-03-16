@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs')%>
+</head>
+<body>
+    <main class="container">
+        <header class="row">
+            <%- include('partials/header.ejs')%>
+        </header>
+        <section class="row" id="app">
+            <div class="col-6 offset-3 mt-3">
+                <form action="board">
+                    <div class="form-group">
+                        <label for="username">Tên người dùng</label>
+                        <input type="text"
+                        class="form-control" name="username" id="username"
+                        aria-describedby="UsernameHelpId" placeholder="Tên người dùng">
+                        <small id="UsernameHelpId" class="form-text text-muted invisible">
+                            Tên người dùng không được phép để trống</small>
+                    </div>
+                    <div class="form-group">
+                        <hr>
+                        <button type="button" id="play" class="btn btn-primary">Let's go</button>
+                    </div>
+                </form>
+            </div> 
+        </section>
+        <footer class="row">
+            <%- include('partials/footer.ejs')%>
+        </footer>
+    </main>
+
+    <script src="assets/user.bundle.js"></script>
+    <script src="assets/vendors~user.chunk.js"></script>
+    <%- include('partials/foot.ejs')%>
+</body>
+</html>
